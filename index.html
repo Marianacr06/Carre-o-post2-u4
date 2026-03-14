@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Registro de Usuario</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<main class="contenedor">
+
+<h1>Registro de Usuario</h1>
+
+<form id="form-registro" novalidate>
+
+<div class="campo-grupo">
+<label>Nombre completo</label>
+<input id="nombre" type="text" required minlength="3" placeholder="Ej: Ana García">
+<span class="msg-error" id="error-nombre"></span>
+</div>
+
+<div class="campo-grupo">
+<label>Email</label>
+<input id="email" type="email" required placeholder="usuario@dominio.com">
+<span class="msg-error" id="error-email"></span>
+</div>
+
+<div class="campo-grupo">
+<label>Contraseña</label>
+<input id="password" type="password" required minlength="8">
+<span class="msg-error" id="error-password"></span>
+</div>
+
+<div class="campo-grupo">
+<label>Confirmar contraseña</label>
+<input id="confirmar" type="password" required>
+<span class="msg-error" id="error-confirmar"></span>
+</div>
+
+<div class="campo-grupo">
+<label>Teléfono</label>
+<input id="telefono" type="tel" pattern="[0-9]{7,15}">
+<span class="msg-error" id="error-telefono"></span>
+</div>
+
+<button type="submit">Registrarse</button>
+
+<div id="mensaje-exito" class="oculto">
+Registro exitoso
+</div>
+
+</form>
+
+</main>
+
+<script src="validacion.js" defer></script>
+
+</body>
+</html>
